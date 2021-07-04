@@ -1,4 +1,3 @@
-"""
 demo_edge_detectors_utils.py
 
 four edge detectors:
@@ -15,7 +14,6 @@ four edge detectors:
     (4) Canny edge detector:
         Strong response for horizontal, vertial and diagonal edges
 
-"""
 
 Sample image:<br/>
 <p align="center">
@@ -23,5 +21,5 @@ Sample image:<br/>
 </p>
 Four image edge detectors:<br/>
 <p align="center">
-  <img src="four_edge_detectors_comparison.png" width="420" height="320"/>
+  <img src="four_edge_detectors_comparison.png" width="720" height="620"/>
 </p>
