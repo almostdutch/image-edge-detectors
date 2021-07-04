@@ -1,6 +1,6 @@
-demo_edge_detectors_utils.py
+demo_edge_detectors.py
 
-Four edge detectors:
+Python implementation of four edge detectors:
     
     (1) Sobel edge detector
         Strong response for horizontal and vertical edges
