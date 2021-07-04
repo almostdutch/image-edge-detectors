@@ -23,6 +23,8 @@ import matplotlib.image as mpimg
 from edge_detectors_utils import SobelEdgeDetector, LaplacianEdgeDetector, \
     SingleLineEdgeDetector, CannyEdgeDetector
 
+fontsize = 32;
+
 # load test image
 image_full = np.array(mpimg.imread('sample_image.tif'));
 image_full = image_full.astype(np.float64);
@@ -35,15 +37,15 @@ noise = np.random.normal(mu, sigma, size = (N1, N2));
 image_full_noise = image_full + noise; 
 
 # show images (original and degraded)
-fig_width, fig_height = 5, 5;
+fig_width, fig_height = 15, 15;
 fig, ((ax1, ax2)) = plt.subplots(nrows=1, ncols=2, figsize=(fig_width, fig_height));
 
 ax1.imshow(image_full, cmap='gray')
-ax1.set_title("image original")
+ax1.set_title("image original", fontsize = fontsize)
 ax1.set_axis_off()
 
 ax2.imshow(image_full_noise, cmap='gray')
-ax2.set_title("image + noise")
+ax2.set_title("image + noise", fontsize = fontsize)
 ax2.set_axis_off()
 plt.tight_layout()
 
@@ -75,22 +77,22 @@ noise_sigma = 10; # noise standard deviation
 mask_canny = CannyEdgeDetector(image_full_noise, kernel_sigma, threshold, noise_sigma);
 
 # show images (original and degraded)
-fig_width, fig_height = 5, 5;
+fig_width, fig_height = 20, 20;
 fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2, figsize=(fig_width, fig_height));
 
 ax1.imshow(mask_sobel, cmap='gray')
-ax1.set_title("sobel \n edge detector")
+ax1.set_title("sobel \n edge detector", fontsize = fontsize)
 ax1.set_axis_off()
 
 ax2.imshow(mask_laplacian, cmap='gray')
-ax2.set_title("laplacian \n edge detector")
+ax2.set_title("laplacian \n edge detector", fontsize = fontsize)
 ax2.set_axis_off()
 
 ax3.imshow(mask_directional, cmap='gray')
-ax3.set_title(f'directional ({orientation}) \n edge detector')
+ax3.set_title(f'directional ({orientation}) \n edge detector', fontsize = fontsize)
 ax3.set_axis_off()
 
 ax4.imshow(mask_canny, cmap='gray')
-ax4.set_title("canny \n edge detector")
+ax4.set_title("canny \n edge detector", fontsize = fontsize)
 ax4.set_axis_off()
 plt.tight_layout()
