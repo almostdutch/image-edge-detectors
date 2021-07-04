@@ -1,5 +1,5 @@
 """
-demo_edge_detectors_utils.py
+demo_edge_detectors.py
 
 four edge detectors:
     

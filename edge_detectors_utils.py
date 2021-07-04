@@ -74,7 +74,7 @@ def CalculateLaplacianResponse(img_in):
     sigma: standard deviation of normal distribution
     '''     
 
-    # Laplacian kernel with equally strong response for horizontal, vertial and diagonal edges:   
+    # Laplacian kernel with equally strong response for horizontal, vertical and diagonal edges:   
     kernel_laplacian = np.array([[1, 1, 1], [1, -8, 1], [1, 1, 1]]);
     img_out = correlate(img_in, kernel_laplacian, mode = 'same', method = 'auto');
     
@@ -100,7 +100,7 @@ def CalculateDirEdgeResponse(img_in, orientation):
     return img_out;        
         
 def SobelEdgeDetector(img_in, kernel_sigma, threshold, noise_sigma):
-    '''Returns a binary masks with horizontal and vertial edges
+    '''Returns a binary masks with horizontal and vertical edges
     
     img_in: original gray scale image
     kernel_sigma: Gaussian kernel standard deviation for denoising
@@ -137,7 +137,7 @@ def SobelEdgeDetector(img_in, kernel_sigma, threshold, noise_sigma):
     return mask;
 
 def LaplacianEdgeDetector(img_in, kernel_sigma, threshold, noise_sigma):
-    '''Returns a binary masks with horizontal, vertial and diagonal edges
+    '''Returns a binary masks with horizontal, vertical and diagonal edges
     
     img_in: original gray scale image
     kernel_sigma: Gaussian kernel standard deviation for denoising
@@ -176,7 +176,7 @@ def LaplacianEdgeDetector(img_in, kernel_sigma, threshold, noise_sigma):
     return mask;
 
 def SingleLineEdgeDetector(img_in, kernel_sigma, threshold, noise_sigma, orientation):
-    '''Returns a binary masks with horizontal, vertial and diagonal edges
+    '''Returns a binary masks with horizontal, vertical and diagonal edges
     
     img_in: original gray scale image
     kernel_sigma: Gaussian kernel standard deviation for denoising
@@ -216,7 +216,7 @@ def SingleLineEdgeDetector(img_in, kernel_sigma, threshold, noise_sigma, orienta
     return mask;
 
 def CannyEdgeDetector(img_in, kernel_sigma, threshold, noise_sigma):
-    '''Returns a binary masks with horizontal, vertial and diagonal edges
+    '''Returns a binary masks with horizontal, vertical and diagonal edges
     
     img_in: original gray scale image
     kernel_sigma: Gaussian kernel standard deviation for denoising
