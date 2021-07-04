@@ -1,18 +1,18 @@
 demo_edge_detectors_utils.py
 
-four edge detectors:
+Four edge detectors:
     
     (1) Sobel edge detector
-        Strong response for horizontal and vertial edges
+        Strong response for horizontal and vertical edges
         
     (2) Laplacian edge detector:
-        Strong response for horizontal, vertial and diagonal edges
+        Strong response for horizontal, vertical and diagonal edges
         
     (3) Single line directional edge detector:
-        Strong response for single line horizontal, vertial or diagonal edges
+        Strong response for single line horizontal, vertical or diagonal edges
     
     (4) Canny edge detector:
-        Strong response for horizontal, vertial and diagonal edges
+        Strong response for horizontal, vertical and diagonal edges
 
 
 Sample image:<br/>
